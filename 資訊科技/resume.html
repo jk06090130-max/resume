@@ -6,6 +6,29 @@
   <title>個人履歷 - AU114054062</title>
   <style>
     body {
+
+      <button onclick="toggleMusic()">🎵 播放 / 暫停音樂</button>
+
+<audio id="bgm" loop>
+  <source src="WANTCHU - keshi (youtube)" type="audio/mpeg">
+</audio>
+
+<script>
+let playing = false;
+
+function toggleMusic() {
+  const bgm = document.getElementById("bgm");
+
+  if (playing) {
+    bgm.pause();
+  } else {
+    bgm.play();
+  }
+
+  playing = !playing;
+}
+</script>
+
       margin: 0;
       font-family: Arial, sans-serif;
       background: #f5f7fa;
