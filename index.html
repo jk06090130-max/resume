@@ -1,1 +1,22 @@
 <meta http-equiv="refresh" content="0; url=resume.html">
+<button onclick="toggleMusic()">🎵 播放 / 暫停音樂</button>
+
+<audio id="bgm" loop>
+  <source src="music.mp3" type="audio/mpeg">
+</audio>
+
+<script>
+let playing = false;
+
+function toggleMusic() {
+  const bgm = document.getElementById("bgm");
+
+  if (playing) {
+    bgm.pause();
+  } else {
+    bgm.play();
+  }
+
+  playing = !playing;
+}
+</script>
